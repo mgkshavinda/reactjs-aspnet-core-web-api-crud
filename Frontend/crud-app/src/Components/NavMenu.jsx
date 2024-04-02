@@ -12,11 +12,12 @@ const NavMenu = () => {
           <Navbar.Brand href="#home">Student Management System</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Details</Nav.Link>
+            <Nav.Link href="#features">Results</Nav.Link>
             <Nav.Link href="#pricing">About</Nav.Link>
           </Nav>
         </Container>
         </Navbar>
+        <br/>
 
     </div>
   )

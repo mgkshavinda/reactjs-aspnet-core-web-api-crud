@@ -1,10 +1,15 @@
-import NavMenu from './Components/NavMenu';
+
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
 
 function App() {
   return (
-    <>
-      <NavMenu/>
-    </>
+    <Routes>
+      <Route></Route>
+    </Routes>
+    // <>
+    //   <HomePage/>    
+    // </>
   );
 }
 
