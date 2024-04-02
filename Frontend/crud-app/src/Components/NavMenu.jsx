@@ -11,9 +11,9 @@ const NavMenu = () => {
         <Container>
           <Navbar.Brand href="#home">Student Management System</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Results</Nav.Link>
-            <Nav.Link href="#pricing">About</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="resultPage">Results</Nav.Link>
+            <Nav.Link href="aboutMe">About</Nav.Link>
           </Nav>
         </Container>
         </Navbar>
