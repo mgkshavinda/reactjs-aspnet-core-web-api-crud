@@ -9,7 +9,7 @@
         public String? Address { get; set; }
         public String? City { get; set; }
         public int Age { get; set; }
-
+        public int IsCheck { get; set; }
 
     }
 }

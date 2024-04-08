@@ -11,8 +11,8 @@ using crud_app.Models;
 namespace crud_app.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20240408193419_Initial")]
-    partial class Initial
+    [Migration("20240408205833_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,9 @@ namespace crud_app.Migrations
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IsCheck")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");

@@ -5,7 +5,7 @@
 namespace crud_app.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,8 @@ namespace crud_app.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Age = table.Column<int>(type: "int", nullable: false)
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    IsCheck = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

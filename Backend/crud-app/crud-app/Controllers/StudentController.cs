@@ -51,6 +51,7 @@ namespace crud_app.Controllers
             dbStudent.Address = student.Address;
             dbStudent.City = student.City;
             dbStudent.Age = student.Age;
+            dbStudent.IsCheck = student.IsCheck;
 
             await _studentContext.SaveChangesAsync();
             return Ok(await _studentContext.Students.ToListAsync());

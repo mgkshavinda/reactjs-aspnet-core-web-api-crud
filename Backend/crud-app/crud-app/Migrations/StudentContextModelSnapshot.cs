@@ -44,6 +44,9 @@ namespace crud_app.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("IsCheck")
+                        .HasColumnType("int");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 

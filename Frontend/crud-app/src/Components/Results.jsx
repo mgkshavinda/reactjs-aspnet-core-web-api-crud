@@ -1,9 +1,16 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container, Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
+import Modal from 'react-bootstrap/Modal';
 
 
 const Results = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <Container>
         <Table striped bordered hover size="sm">
@@ -48,6 +55,21 @@ const Results = () => {
                 </tr>
             </tbody>
         </Table>
+
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
     </Container>
   )
 }

@@ -9,7 +9,7 @@ const NavMenu = () => {
     <div>
         <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Student Management System</Navbar.Brand>
+          <Navbar.Brand href="#home" >Student Management System</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="resultPage">Results</Nav.Link>
