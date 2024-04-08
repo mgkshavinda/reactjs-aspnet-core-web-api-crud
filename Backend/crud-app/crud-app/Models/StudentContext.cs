@@ -9,6 +9,6 @@ namespace crud_app.Models
 
         }
 
-        DbSet<Student> Students { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

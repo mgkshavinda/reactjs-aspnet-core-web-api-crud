@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using crud_app.Models;
 
 namespace crud_app.Controllers
 {
@@ -22,6 +23,53 @@ namespace crud_app.Controllers
             return Ok(student);
         }
 
-    }
+        [HttpPost]
+        public async Task<IActionResult> AddStudent(Student student)
+        {
+            if (student == null)
+            {
+                return BadRequest("Not found");
+            }
 
+            _studentContext.Students.Add(student);
+            await _studentContext.SaveChangesAsync();
+            return Ok(await _studentContext.Students.ToListAsync());
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateStudent(int id, Student student)
+        {
+            var dbStudent = await _studentContext.Students.FindAsync(id);
+            if (dbStudent == null)
+            {
+                return BadRequest("Student not found");
+            }
+
+            dbStudent.FirstName = student.FirstName;
+            dbStudent.LastName = student.LastName;
+            dbStudent.Email = student.Email;
+            dbStudent.Address = student.Address;
+            dbStudent.City = student.City;
+            dbStudent.Age = student.Age;
+
+            await _studentContext.SaveChangesAsync();
+            return Ok(await _studentContext.Students.ToListAsync());
+
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteStudent(int id)
+        {
+            var dbStudent = await _studentContext.Students.FindAsync(id);
+            if (dbStudent == null)
+            {
+                return BadRequest("Student not found");
+            }
+
+            _studentContext.Students.Remove(dbStudent);
+            await _studentContext.SaveChangesAsync();
+            return Ok(await _studentContext.Students.ToListAsync());
+        }
+
+    }
 }
