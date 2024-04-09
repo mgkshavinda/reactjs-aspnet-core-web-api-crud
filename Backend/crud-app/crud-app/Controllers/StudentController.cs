@@ -23,6 +23,13 @@ namespace crud_app.Controllers
             return Ok(student);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetStudentById(int id)
+        {
+            var dbStudent = await _studentContext.Students.FindAsync(id);
+            return Ok(dbStudent);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddStudent(Student student)
         {
