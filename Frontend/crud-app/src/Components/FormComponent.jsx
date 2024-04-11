@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { Container } from 'react-bootstrap';
-import { Toast, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
 const FormComponent = () => {
@@ -41,7 +42,7 @@ const FormComponent = () => {
         "Email" : email,
         "Address" : address,
         "City" : city,
-        "age" : age,
+        "Age" : age,
         "IsCheck" : isCheck
     }
     axios.post(url, data)
@@ -64,7 +65,7 @@ const FormComponent = () => {
     setIsCheck('0');
   }
 
-  const handleActiveChange = (e) => {
+  const handleCheckChange = (e) => {
     if(e.target.checked){
       setIsCheck(1);
     }
@@ -117,7 +118,7 @@ const FormComponent = () => {
           </Row>
 
           <Form.Group className="mb-3" id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" checked={isCheck === 1 ? true : false} value={setIsCheck} onChange={(e)=>handleActiveChange(e)}/>
+            <Form.Check type="checkbox" label="Check me out" checked={isCheck === 1 ? true : false} value={setIsCheck} onChange={(e)=>handleCheckChange(e)}/>
           </Form.Group>
 
           <Button variant="primary" type="submit">

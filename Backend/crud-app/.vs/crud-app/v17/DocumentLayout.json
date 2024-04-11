@@ -58,8 +58,7 @@
               "RelativeToolTip": "crud-app\\Models\\StudentContext.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAqwAsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:39:52.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T16:39:52.281Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "crud-app\\Models\\Student.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAiwAsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T16:39:37.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T16:39:37.804Z"
             },
             {
               "$type": "Document",
@@ -106,7 +104,7 @@
               "RelativeDocumentMoniker": "crud-app\\Controllers\\StudentController.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Documents\\GitHub\\reactjs-asp-.net-core-web-api-crud\\Backend\\crud-app\\crud-app\\Controllers\\StudentController.cs",
               "RelativeToolTip": "crud-app\\Controllers\\StudentController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAIwCMAAAAgAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAUwC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T16:02:30.46Z",
               "EditorCaption": ""
